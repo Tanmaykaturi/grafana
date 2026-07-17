@@ -42,12 +42,7 @@ contactPoints:
                             Wf86aX6PepsntZv2GYlA5UpabfT2EZICICpJ5h/iI+i341gBmLiAFQOyTDT+/wQc
                             6MF9+Yw1Yy0t
                             -----END CERTIFICATE-----
-                        clientKey: |-
-                            -----BEGIN EC PRIVATE KEY-----
-                            MHcCAQEEIIrYSSNQFaA2Hwf1duRSxKtLYX5CB04fSeQ6tF1aY/PuoAoGCCqGSM49
-                            AwEHoUQDQgAEPR3tU2Fta9ktY+6P9G0cWO+0kETA6SFs38GecTyudlHz6xvCdz8q
-                            EKTcWGekdmdDPsHloRNtsiCa697B2O9IFA==
-                            -----END EC PRIVATE KEY-----
+                        clientKey: '[REDACTED]'
                         insecureSkipVerify: false
                     token_url: https://localhost/auth/token
             message: '{{ len .Alerts.Firing }} alerts are firing, {{ len .Alerts.Resolved }} are resolved'
@@ -95,12 +90,7 @@ contactPoints:
                             Wf86aX6PepsntZv2GYlA5UpabfT2EZICICpJ5h/iI+i341gBmLiAFQOyTDT+/wQc
                             6MF9+Yw1Yy0t
                             -----END CERTIFICATE-----
-                        clientKey: |-
-                            -----BEGIN EC PRIVATE KEY-----
-                            MHcCAQEEIIrYSSNQFaA2Hwf1duRSxKtLYX5CB04fSeQ6tF1aY/PuoAoGCCqGSM49
-                            AwEHoUQDQgAEPR3tU2Fta9ktY+6P9G0cWO+0kETA6SFs38GecTyudlHz6xvCdz8q
-                            EKTcWGekdmdDPsHloRNtsiCa697B2O9IFA==
-                            -----END EC PRIVATE KEY-----
+                        clientKey: '[REDACTED]'
                         insecureSkipVerify: false
                     token_url: https://localhost/auth/token
             message: test-message
@@ -157,12 +147,7 @@ contactPoints:
                             Wf86aX6PepsntZv2GYlA5UpabfT2EZICICpJ5h/iI+i341gBmLiAFQOyTDT+/wQc
                             6MF9+Yw1Yy0t
                             -----END CERTIFICATE-----
-                        clientKey: |-
-                            -----BEGIN EC PRIVATE KEY-----
-                            MHcCAQEEIIrYSSNQFaA2Hwf1duRSxKtLYX5CB04fSeQ6tF1aY/PuoAoGCCqGSM49
-                            AwEHoUQDQgAEPR3tU2Fta9ktY+6P9G0cWO+0kETA6SFs38GecTyudlHz6xvCdz8q
-                            EKTcWGekdmdDPsHloRNtsiCa697B2O9IFA==
-                            -----END EC PRIVATE KEY-----
+                        clientKey: '[REDACTED]'
                         insecureSkipVerify: false
                     token_url: https://localhost/auth/token
             message: test-message
@@ -213,12 +198,7 @@ contactPoints:
                             Wf86aX6PepsntZv2GYlA5UpabfT2EZICICpJ5h/iI+i341gBmLiAFQOyTDT+/wQc
                             6MF9+Yw1Yy0t
                             -----END CERTIFICATE-----
-                        clientKey: |-
-                            -----BEGIN EC PRIVATE KEY-----
-                            MHcCAQEEIIrYSSNQFaA2Hwf1duRSxKtLYX5CB04fSeQ6tF1aY/PuoAoGCCqGSM49
-                            AwEHoUQDQgAEPR3tU2Fta9ktY+6P9G0cWO+0kETA6SFs38GecTyudlHz6xvCdz8q
-                            EKTcWGekdmdDPsHloRNtsiCa697B2O9IFA==
-                            -----END EC PRIVATE KEY-----
+                        clientKey: '[REDACTED]'
                         insecureSkipVerify: false
                     token_url: https://localhost/auth/token
             issue_type: Test Issue Type
@@ -277,12 +257,7 @@ contactPoints:
                             Wf86aX6PepsntZv2GYlA5UpabfT2EZICICpJ5h/iI+i341gBmLiAFQOyTDT+/wQc
                             6MF9+Yw1Yy0t
                             -----END CERTIFICATE-----
-                        clientKey: |-
-                            -----BEGIN EC PRIVATE KEY-----
-                            MHcCAQEEIIrYSSNQFaA2Hwf1duRSxKtLYX5CB04fSeQ6tF1aY/PuoAoGCCqGSM49
-                            AwEHoUQDQgAEPR3tU2Fta9ktY+6P9G0cWO+0kETA6SFs38GecTyudlHz6xvCdz8q
-                            EKTcWGekdmdDPsHloRNtsiCa697B2O9IFA==
-                            -----END EC PRIVATE KEY-----
+                        clientKey: '[REDACTED]'
                         insecureSkipVerify: false
                     token_url: https://localhost/auth/token
             kafkaClusterId: "12345"
@@ -331,12 +306,7 @@ contactPoints:
                             Wf86aX6PepsntZv2GYlA5UpabfT2EZICICpJ5h/iI+i341gBmLiAFQOyTDT+/wQc
                             6MF9+Yw1Yy0t
                             -----END CERTIFICATE-----
-                        clientKey: |-
-                            -----BEGIN EC PRIVATE KEY-----
-                            MHcCAQEEIIrYSSNQFaA2Hwf1duRSxKtLYX5CB04fSeQ6tF1aY/PuoAoGCCqGSM49
-                            AwEHoUQDQgAEPR3tU2Fta9ktY+6P9G0cWO+0kETA6SFs38GecTyudlHz6xvCdz8q
-                            EKTcWGekdmdDPsHloRNtsiCa697B2O9IFA==
-                            -----END EC PRIVATE KEY-----
+                        clientKey: '[REDACTED]'
                         insecureSkipVerify: false
                     token_url: https://localhost/auth/token
             title: test-title
@@ -399,12 +369,7 @@ contactPoints:
                             Wf86aX6PepsntZv2GYlA5UpabfT2EZICICpJ5h/iI+i341gBmLiAFQOyTDT+/wQc
                             6MF9+Yw1Yy0t
                             -----END CERTIFICATE-----
-                        clientKey: |-
-                            -----BEGIN EC PRIVATE KEY-----
-                            MHcCAQEEIIrYSSNQFaA2Hwf1duRSxKtLYX5CB04fSeQ6tF1aY/PuoAoGCCqGSM49
-                            AwEHoUQDQgAEPR3tU2Fta9ktY+6P9G0cWO+0kETA6SFs38GecTyudlHz6xvCdz8q
-                            EKTcWGekdmdDPsHloRNtsiCa697B2O9IFA==
-                            -----END EC PRIVATE KEY-----
+                        clientKey: '[REDACTED]'
                         insecureSkipVerify: false
                     token_url: https://localhost/auth/token
             httpMethod: PUT
@@ -458,12 +423,7 @@ contactPoints:
                             Wf86aX6PepsntZv2GYlA5UpabfT2EZICICpJ5h/iI+i341gBmLiAFQOyTDT+/wQc
                             6MF9+Yw1Yy0t
                             -----END CERTIFICATE-----
-                        clientKey: |-
-                            -----BEGIN EC PRIVATE KEY-----
-                            MHcCAQEEIIrYSSNQFaA2Hwf1duRSxKtLYX5CB04fSeQ6tF1aY/PuoAoGCCqGSM49
-                            AwEHoUQDQgAEPR3tU2Fta9ktY+6P9G0cWO+0kETA6SFs38GecTyudlHz6xvCdz8q
-                            EKTcWGekdmdDPsHloRNtsiCa697B2O9IFA==
-                            -----END EC PRIVATE KEY-----
+                        clientKey: '[REDACTED]'
                         insecureSkipVerify: false
                     token_url: https://localhost/auth/token
             message: test-message
@@ -521,12 +481,7 @@ contactPoints:
                             Wf86aX6PepsntZv2GYlA5UpabfT2EZICICpJ5h/iI+i341gBmLiAFQOyTDT+/wQc
                             6MF9+Yw1Yy0t
                             -----END CERTIFICATE-----
-                        clientKey: |-
-                            -----BEGIN EC PRIVATE KEY-----
-                            MHcCAQEEIIrYSSNQFaA2Hwf1duRSxKtLYX5CB04fSeQ6tF1aY/PuoAoGCCqGSM49
-                            AwEHoUQDQgAEPR3tU2Fta9ktY+6P9G0cWO+0kETA6SFs38GecTyudlHz6xvCdz8q
-                            EKTcWGekdmdDPsHloRNtsiCa697B2O9IFA==
-                            -----END EC PRIVATE KEY-----
+                        clientKey: '[REDACTED]'
                         insecureSkipVerify: false
                     token_url: https://localhost/auth/token
             integrationKey: '[REDACTED]'
@@ -584,12 +539,7 @@ contactPoints:
                             Wf86aX6PepsntZv2GYlA5UpabfT2EZICICpJ5h/iI+i341gBmLiAFQOyTDT+/wQc
                             6MF9+Yw1Yy0t
                             -----END CERTIFICATE-----
-                        clientKey: |-
-                            -----BEGIN EC PRIVATE KEY-----
-                            MHcCAQEEIIrYSSNQFaA2Hwf1duRSxKtLYX5CB04fSeQ6tF1aY/PuoAoGCCqGSM49
-                            AwEHoUQDQgAEPR3tU2Fta9ktY+6P9G0cWO+0kETA6SFs38GecTyudlHz6xvCdz8q
-                            EKTcWGekdmdDPsHloRNtsiCa697B2O9IFA==
-                            -----END EC PRIVATE KEY-----
+                        clientKey: '[REDACTED]'
                         insecureSkipVerify: false
                     token_url: https://localhost/auth/token
             message: test-message
@@ -645,12 +595,7 @@ contactPoints:
                             Wf86aX6PepsntZv2GYlA5UpabfT2EZICICpJ5h/iI+i341gBmLiAFQOyTDT+/wQc
                             6MF9+Yw1Yy0t
                             -----END CERTIFICATE-----
-                        clientKey: |-
-                            -----BEGIN EC PRIVATE KEY-----
-                            MHcCAQEEIIrYSSNQFaA2Hwf1duRSxKtLYX5CB04fSeQ6tF1aY/PuoAoGCCqGSM49
-                            AwEHoUQDQgAEPR3tU2Fta9ktY+6P9G0cWO+0kETA6SFs38GecTyudlHz6xvCdz8q
-                            EKTcWGekdmdDPsHloRNtsiCa697B2O9IFA==
-                            -----END EC PRIVATE KEY-----
+                        clientKey: '[REDACTED]'
                         insecureSkipVerify: false
                     token_url: https://localhost/auth/token
             message: test-message
@@ -731,12 +676,7 @@ contactPoints:
                             Wf86aX6PepsntZv2GYlA5UpabfT2EZICICpJ5h/iI+i341gBmLiAFQOyTDT+/wQc
                             6MF9+Yw1Yy0t
                             -----END CERTIFICATE-----
-                        clientKey: |-
-                            -----BEGIN EC PRIVATE KEY-----
-                            MHcCAQEEIIrYSSNQFaA2Hwf1duRSxKtLYX5CB04fSeQ6tF1aY/PuoAoGCCqGSM49
-                            AwEHoUQDQgAEPR3tU2Fta9ktY+6P9G0cWO+0kETA6SFs38GecTyudlHz6xvCdz8q
-                            EKTcWGekdmdDPsHloRNtsiCa697B2O9IFA==
-                            -----END EC PRIVATE KEY-----
+                        clientKey: '[REDACTED]'
                         insecureSkipVerify: false
                     token_url: https://localhost/auth/token
             message: test-message
@@ -787,12 +727,7 @@ contactPoints:
                             Wf86aX6PepsntZv2GYlA5UpabfT2EZICICpJ5h/iI+i341gBmLiAFQOyTDT+/wQc
                             6MF9+Yw1Yy0t
                             -----END CERTIFICATE-----
-                        clientKey: |-
-                            -----BEGIN EC PRIVATE KEY-----
-                            MHcCAQEEIIrYSSNQFaA2Hwf1duRSxKtLYX5CB04fSeQ6tF1aY/PuoAoGCCqGSM49
-                            AwEHoUQDQgAEPR3tU2Fta9ktY+6P9G0cWO+0kETA6SFs38GecTyudlHz6xvCdz8q
-                            EKTcWGekdmdDPsHloRNtsiCa697B2O9IFA==
-                            -----END EC PRIVATE KEY-----
+                        clientKey: '[REDACTED]'
                         insecureSkipVerify: false
                     token_url: https://localhost/auth/token
             message: test-message
@@ -842,12 +777,7 @@ contactPoints:
                             Wf86aX6PepsntZv2GYlA5UpabfT2EZICICpJ5h/iI+i341gBmLiAFQOyTDT+/wQc
                             6MF9+Yw1Yy0t
                             -----END CERTIFICATE-----
-                        clientKey: |-
-                            -----BEGIN EC PRIVATE KEY-----
-                            MHcCAQEEIIrYSSNQFaA2Hwf1duRSxKtLYX5CB04fSeQ6tF1aY/PuoAoGCCqGSM49
-                            AwEHoUQDQgAEPR3tU2Fta9ktY+6P9G0cWO+0kETA6SFs38GecTyudlHz6xvCdz8q
-                            EKTcWGekdmdDPsHloRNtsiCa697B2O9IFA==
-                            -----END EC PRIVATE KEY-----
+                        clientKey: '[REDACTED]'
                         insecureSkipVerify: false
                     token_url: https://localhost/auth/token
             recipient_id: '*1234567'
@@ -893,12 +823,7 @@ contactPoints:
                             Wf86aX6PepsntZv2GYlA5UpabfT2EZICICpJ5h/iI+i341gBmLiAFQOyTDT+/wQc
                             6MF9+Yw1Yy0t
                             -----END CERTIFICATE-----
-                        clientKey: |-
-                            -----BEGIN EC PRIVATE KEY-----
-                            MHcCAQEEIIrYSSNQFaA2Hwf1duRSxKtLYX5CB04fSeQ6tF1aY/PuoAoGCCqGSM49
-                            AwEHoUQDQgAEPR3tU2Fta9ktY+6P9G0cWO+0kETA6SFs38GecTyudlHz6xvCdz8q
-                            EKTcWGekdmdDPsHloRNtsiCa697B2O9IFA==
-                            -----END EC PRIVATE KEY-----
+                        clientKey: '[REDACTED]'
                         insecureSkipVerify: false
                     token_url: https://localhost/auth/token
             messageType: test-messagetype
@@ -946,12 +871,7 @@ contactPoints:
                             Wf86aX6PepsntZv2GYlA5UpabfT2EZICICpJ5h/iI+i341gBmLiAFQOyTDT+/wQc
                             6MF9+Yw1Yy0t
                             -----END CERTIFICATE-----
-                        clientKey: |-
-                            -----BEGIN EC PRIVATE KEY-----
-                            MHcCAQEEIIrYSSNQFaA2Hwf1duRSxKtLYX5CB04fSeQ6tF1aY/PuoAoGCCqGSM49
-                            AwEHoUQDQgAEPR3tU2Fta9ktY+6P9G0cWO+0kETA6SFs38GecTyudlHz6xvCdz8q
-                            EKTcWGekdmdDPsHloRNtsiCa697B2O9IFA==
-                            -----END EC PRIVATE KEY-----
+                        clientKey: '[REDACTED]'
                         insecureSkipVerify: false
                     token_url: https://localhost/auth/token
             message: test-message
@@ -1042,12 +962,7 @@ contactPoints:
                             Wf86aX6PepsntZv2GYlA5UpabfT2EZICICpJ5h/iI+i341gBmLiAFQOyTDT+/wQc
                             6MF9+Yw1Yy0t
                             -----END CERTIFICATE-----
-                        clientKey: |-
-                            -----BEGIN EC PRIVATE KEY-----
-                            MHcCAQEEIIrYSSNQFaA2Hwf1duRSxKtLYX5CB04fSeQ6tF1aY/PuoAoGCCqGSM49
-                            AwEHoUQDQgAEPR3tU2Fta9ktY+6P9G0cWO+0kETA6SFs38GecTyudlHz6xvCdz8q
-                            EKTcWGekdmdDPsHloRNtsiCa697B2O9IFA==
-                            -----END EC PRIVATE KEY-----
+                        clientKey: '[REDACTED]'
                         insecureSkipVerify: false
                     token_url: https://localhost/auth/token
             message: test-message
