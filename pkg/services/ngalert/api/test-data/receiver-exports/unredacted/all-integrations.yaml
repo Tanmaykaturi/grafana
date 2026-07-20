@@ -625,10 +625,7 @@ contactPoints:
                             Wf86aX6PepsntZv2GYlA5UpabfT2EZICICpJ5h/iI+i341gBmLiAFQOyTDT+/wQc
                             6MF9+Yw1Yy0t
                             -----END CERTIFICATE-----
-                        clientKey: |-
-                            -----BEGIN EC PRIVATE KEY-----
-                            THIS-IS-A-FAKE-KEY-FOR-TESTING-PURPOSES-ONLY-NOT-A-REAL-PRIVATE-KEY=
-                            -----END EC PRIVATE KEY-----
+                        clientKey: THIS-IS-A-FAKE-KEY-FOR-TESTING-PURPOSES-ONLY-NOT-A-REAL-PRIVATE-KEY
                         insecureSkipVerify: false
                     token_url: https://localhost/auth/token
             message: test-message
