@@ -3,6 +3,7 @@ version: '3'
 services:
   traefik:
     image: traefik:v2.1
+    read_only: true
     volumes:
       - './traefik.yml:/etc/traefik/traefik.yml'
       - './configs:/etc/traefik/configs'
