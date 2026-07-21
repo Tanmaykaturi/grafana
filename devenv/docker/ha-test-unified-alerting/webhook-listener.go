@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"flag"
 	"fmt"
+	"html/template"
 	"io"
 	"log"
 	"net/http"
@@ -121,9 +122,12 @@ func main() {
 	}
 
 	waitDuration := time.Duration(waitSeconds) * time.Second
+	landingTmpl := template.Must(template.New("landing").Parse(landingPage))
 	http.HandleFunc("/", func(writer http.ResponseWriter, request *http.Request) {
 		writer.WriteHeader(http.StatusOK)
-		writer.Write([]byte(landingPage))
+		if err := landingTmpl.Execute(writer, nil); err != nil {
+			log.Println(err)
+		}
 	})
 
 	http.HandleFunc("/listen", func(w http.ResponseWriter, r *http.Request) {
@@ -146,18 +150,13 @@ func main() {
 		<-time.After(waitDuration)
 	})
 	http.HandleFunc("/fingerprints", func(w http.ResponseWriter, r *http.Request) {
-		b, err := func() ([]byte, error) {
-			mu.Lock()
-			defer mu.Unlock()
-			return json.Marshal(fingerprints)
-		}()
-		if err != nil {
-			log.Println(err)
-			w.WriteHeader(http.StatusInternalServerError)
-			return
-		}
+		mu.Lock()
+		data := fingerprints
+		mu.Unlock()
 		w.Header().Add("Content-Type", "application/json")
-		w.Write(b)
+		if err := json.NewEncoder(w).Encode(data); err != nil {
+			log.Println(err)
+		}
 	})
 	log.Println("Listening")
 	log.Printf("Wait Duration %v\n", waitDuration)
