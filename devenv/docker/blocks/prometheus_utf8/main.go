@@ -1,10 +1,18 @@
 package main
 
 import (
+	"crypto/ecdsa"
+	"crypto/elliptic"
+	"crypto/rand"
+	"crypto/x509"
+	"crypto/x509/pkix"
+	"encoding/pem"
 	"fmt"
 	"log"
-	"math/rand/v2"
+	mathrand "math/rand/v2"
+	"math/big"
 	"net/http"
+	"os"
 	"strconv"
 	"time"
 
@@ -24,10 +32,52 @@ func randomValues(max int) func() (string, bool) {
 
 func staticList(input []string) func() string {
 	return func() string {
-		i := rand.IntN(len(input))
+		i := mathrand.IntN(len(input))
 
 		return input[i]
 	}
+}
+
+// generateSelfSignedCert creates a temporary self-signed TLS certificate and
+// key, writes them to certFile/keyFile on disk, and returns any error.
+func generateSelfSignedCert(certFile, keyFile string) error {
+	key, err := ecdsa.GenerateKey(elliptic.P256(), rand.Reader)
+	if err != nil {
+		return err
+	}
+
+	template := &x509.Certificate{
+		SerialNumber: big.NewInt(1),
+		Subject:      pkix.Name{CommonName: "localhost"},
+		NotBefore:    time.Now(),
+		NotAfter:     time.Now().Add(365 * 24 * time.Hour),
+		DNSNames:     []string{"localhost"},
+	}
+
+	certDER, err := x509.CreateCertificate(rand.Reader, template, template, &key.PublicKey, key)
+	if err != nil {
+		return err
+	}
+
+	certOut, err := os.Create(certFile)
+	if err != nil {
+		return err
+	}
+	defer certOut.Close()
+	if err := pem.Encode(certOut, &pem.Block{Type: "CERTIFICATE", Bytes: certDER}); err != nil {
+		return err
+	}
+
+	keyOut, err := os.Create(keyFile)
+	if err != nil {
+		return err
+	}
+	defer keyOut.Close()
+	keyDER, err := x509.MarshalECPrivateKey(key)
+	if err != nil {
+		return err
+	}
+	return pem.Encode(keyOut, &pem.Block{Type: "EC PRIVATE KEY", Bytes: keyDER})
 }
 
 type dimension struct {
@@ -121,7 +171,13 @@ func main() {
 		}
 	}()
 
-	fmt.Printf("Server started at :9112\n")
+	const certFile = "cert.pem"
+	const keyFile = "key.pem"
+	if err := generateSelfSignedCert(certFile, keyFile); err != nil {
+		log.Fatalf("Failed to generate TLS certificate: %v", err)
+	}
 
-	log.Fatal(http.ListenAndServe(":9112", nil))
+	fmt.Printf("Server started at :9112 (TLS)\n")
+
+	log.Fatal(http.ListenAndServeTLS(":9112", certFile, keyFile, nil))
 }
