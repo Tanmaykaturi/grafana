@@ -64,19 +64,23 @@ export function formatFiles(basePath: string, files: string[]) {
 
 /** Run the RTK codegen to produce endpoints.gen.ts. */
 export function runGenerateApis(basePath: string, variant: Variant) {
-  const isAllowed = ALLOWED_GENERATE_COMMANDS.some(
+  const allowedEntry = ALLOWED_GENERATE_COMMANDS.find(
     ([allowedCmd, ...allowedArgs]) =>
       variant.generateCmd === allowedCmd &&
       variant.generateArgs.length === allowedArgs.length &&
       variant.generateArgs.every((arg, i) => arg === allowedArgs[i])
   );
-  if (!isAllowed) {
+  if (!allowedEntry) {
     throw new Error(
       `Refusing to run disallowed generate command: "${variant.generateCmd} ${variant.generateArgs.join(' ')}"`
     );
   }
-  console.log(`⏳ Running ${variant.generateCmd} to generate endpoints...`);
-  const result = spawnSync(variant.generateCmd, [...variant.generateArgs], { stdio: 'inherit', cwd: basePath, shell: false });
+  // Use the validated values from the trusted allowlist entry directly, rather
+  // than re-using the variant argument fields, to eliminate any risk of the
+  // caller-supplied variant object influencing the spawned process.
+  const [safeCmd, ...safeArgs] = allowedEntry;
+  console.log(`⏳ Running ${safeCmd} to generate endpoints...`);
+  const result = spawnSync(safeCmd, safeArgs, { stdio: 'inherit', cwd: basePath, shell: false });
   if (result.error) {
     console.error(`❌ Failed to generate API endpoints: ${result.error.message}`);
     throw result.error;
